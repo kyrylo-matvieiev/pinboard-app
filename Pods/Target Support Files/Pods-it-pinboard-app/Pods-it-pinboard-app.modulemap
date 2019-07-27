@@ -1,0 +1,6 @@
+framework module Pods_it_pinboard_app {
+  umbrella header "Pods-it-pinboard-app-umbrella.h"
+
+  export *
+  module * { export * }
+}
