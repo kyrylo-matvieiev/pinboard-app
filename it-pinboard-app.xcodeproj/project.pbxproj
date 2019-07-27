@@ -3,26 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134A9F7F22EC9F7D0097DF4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 134A9F7E22EC9F7D0097DF4D /* GoogleService-Info.plist */; };
 		138ADC1A22EC94D70044B0B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138ADC1922EC94D70044B0B0 /* AppDelegate.swift */; };
-		138ADC1C22EC94D70044B0B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138ADC1B22EC94D70044B0B0 /* ViewController.swift */; };
 		138ADC1F22EC94D70044B0B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138ADC1D22EC94D70044B0B0 /* Main.storyboard */; };
 		138ADC2122EC94D70044B0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138ADC2022EC94D70044B0B0 /* Assets.xcassets */; };
 		138ADC2422EC94D70044B0B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138ADC2222EC94D70044B0B0 /* LaunchScreen.storyboard */; };
+		13B13AD522ECA59B00AEF0E8 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AD322ECA59B00AEF0E8 /* MenuItem.swift */; };
+		13B13AD822ECA8C800AEF0E8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AD722ECA8C800AEF0E8 /* MenuViewController.swift */; };
+		13B13ADC22ECB15F00AEF0E8 /* XibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13ADB22ECB15F00AEF0E8 /* XibLoadable.swift */; };
+		13B13ADE22ECB3C400AEF0E8 /* PointsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13ADD22ECB3C400AEF0E8 /* PointsListViewController.swift */; };
+		13B13AE022ECB6D500AEF0E8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13ADF22ECB6D500AEF0E8 /* MapViewController.swift */; };
+		13B13AE222ECB6E400AEF0E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AE122ECB6E400AEF0E8 /* ProfileViewController.swift */; };
+		13B13AEA22ECEA6F00AEF0E8 /* StoryboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AE922ECEA6F00AEF0E8 /* StoryboardType.swift */; };
+		13B13AEC22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AEB22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift */; };
 		8A8CBCCC6AF3E91DCEF196AF /* Pods_it_pinboard_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5005596D3078E1CF007300 /* Pods_it_pinboard_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		134A9F7E22EC9F7D0097DF4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		138ADC1622EC94D70044B0B0 /* it-pinboard-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "it-pinboard-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		138ADC1922EC94D70044B0B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		138ADC1B22EC94D70044B0B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		138ADC1E22EC94D70044B0B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		138ADC2022EC94D70044B0B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		138ADC2322EC94D70044B0B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		138ADC2522EC94D70044B0B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13B13AD322ECA59B00AEF0E8 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		13B13AD722ECA8C800AEF0E8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		13B13ADB22ECB15F00AEF0E8 /* XibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibLoadable.swift; sourceTree = "<group>"; };
+		13B13ADD22ECB3C400AEF0E8 /* PointsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsListViewController.swift; sourceTree = "<group>"; };
+		13B13ADF22ECB6D500AEF0E8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		13B13AE122ECB6E400AEF0E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		13B13AE922ECEA6F00AEF0E8 /* StoryboardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardType.swift; sourceTree = "<group>"; };
+		13B13AEB22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		9A5005596D3078E1CF007300 /* Pods_it_pinboard_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_it_pinboard_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B049A59B54D20014309B2152 /* Pods-it-pinboard-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-it-pinboard-app.release.xcconfig"; path = "Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app.release.xcconfig"; sourceTree = "<group>"; };
 		E27103DB4DB01835A89ACE8C /* Pods-it-pinboard-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-it-pinboard-app.debug.xcconfig"; path = "Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -40,6 +56,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		134A9F7922EC9C0C0097DF4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13B13AD422ECA59B00AEF0E8 /* Shared */,
+				13B13AD622ECA7BE00AEF0E8 /* Login */,
+				13B13AD222ECA59B00AEF0E8 /* Menu */,
+				13B13ADD22ECB3C400AEF0E8 /* PointsListViewController.swift */,
+				13B13ADF22ECB6D500AEF0E8 /* MapViewController.swift */,
+				13B13AE122ECB6E400AEF0E8 /* ProfileViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		134A9F7A22EC9C860097DF4D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				138ADC1D22EC94D70044B0B0 /* Main.storyboard */,
+				138ADC2222EC94D70044B0B0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		134A9F7B22EC9CAC0097DF4D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				138ADC2522EC94D70044B0B0 /* Info.plist */,
+				134A9F7E22EC9F7D0097DF4D /* GoogleService-Info.plist */,
+				138ADC2022EC94D70044B0B0 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		138ADC0D22EC94D70044B0B0 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +110,37 @@
 			isa = PBXGroup;
 			children = (
 				138ADC1922EC94D70044B0B0 /* AppDelegate.swift */,
-				138ADC1B22EC94D70044B0B0 /* ViewController.swift */,
-				138ADC1D22EC94D70044B0B0 /* Main.storyboard */,
-				138ADC2022EC94D70044B0B0 /* Assets.xcassets */,
-				138ADC2222EC94D70044B0B0 /* LaunchScreen.storyboard */,
-				138ADC2522EC94D70044B0B0 /* Info.plist */,
+				134A9F7922EC9C0C0097DF4D /* Views */,
+				134A9F7A22EC9C860097DF4D /* Storyboards */,
+				134A9F7B22EC9CAC0097DF4D /* SupportingFiles */,
 			);
 			path = "it-pinboard-app";
+			sourceTree = "<group>";
+		};
+		13B13AD222ECA59B00AEF0E8 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				13B13AD322ECA59B00AEF0E8 /* MenuItem.swift */,
+				13B13AD722ECA8C800AEF0E8 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		13B13AD422ECA59B00AEF0E8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				13B13ADB22ECB15F00AEF0E8 /* XibLoadable.swift */,
+				13B13AE922ECEA6F00AEF0E8 /* StoryboardType.swift */,
+				13B13AEB22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		13B13AD622ECA7BE00AEF0E8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		9A13B60C9BDE02D443439AAD /* Frameworks */ = {
@@ -85,7 +157,6 @@
 				E27103DB4DB01835A89ACE8C /* Pods-it-pinboard-app.debug.xcconfig */,
 				B049A59B54D20014309B2152 /* Pods-it-pinboard-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,6 +171,7 @@
 				138ADC1222EC94D70044B0B0 /* Sources */,
 				138ADC1322EC94D70044B0B0 /* Frameworks */,
 				138ADC1422EC94D70044B0B0 /* Resources */,
+				4AD5928410C8C9377A5E1353 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				138ADC2422EC94D70044B0B0 /* LaunchScreen.storyboard in Resources */,
+				134A9F7F22EC9F7D0097DF4D /* GoogleService-Info.plist in Resources */,
 				138ADC2122EC94D70044B0B0 /* Assets.xcassets in Resources */,
 				138ADC1F22EC94D70044B0B0 /* Main.storyboard in Resources */,
 			);
@@ -157,6 +230,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4AD5928410C8C9377A5E1353 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8BD4EFC686F2232E9EAEAF07 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,8 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				138ADC1C22EC94D70044B0B0 /* ViewController.swift in Sources */,
+				13B13ADE22ECB3C400AEF0E8 /* PointsListViewController.swift in Sources */,
+				13B13AE022ECB6D500AEF0E8 /* MapViewController.swift in Sources */,
+				13B13AEA22ECEA6F00AEF0E8 /* StoryboardType.swift in Sources */,
+				13B13AD522ECA59B00AEF0E8 /* MenuItem.swift in Sources */,
+				13B13ADC22ECB15F00AEF0E8 /* XibLoadable.swift in Sources */,
+				13B13AEC22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift in Sources */,
+				13B13AE222ECB6E400AEF0E8 /* ProfileViewController.swift in Sources */,
 				138ADC1A22EC94D70044B0B0 /* AppDelegate.swift in Sources */,
+				13B13AD822ECA8C800AEF0E8 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,14 +431,17 @@
 			baseConfigurationReference = E27103DB4DB01835A89ACE8C /* Pods-it-pinboard-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "it-pinboard-app/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/it-pinboard-app/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.it-pinboard-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,14 +452,17 @@
 			baseConfigurationReference = B049A59B54D20014309B2152 /* Pods-it-pinboard-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "it-pinboard-app/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/it-pinboard-app/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.it-pinboard-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
