@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1g-h8-8Wh">
-                                <rect key="frame" x="80" y="445.5" width="254" height="5"/>
+                                <rect key="frame" x="80" y="423" width="254" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="5" id="S26-Id-FmQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="S26-Id-FmQ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>

@@ -11,8 +11,9 @@ import FirebaseAuth
 import GoogleSignIn
 
 class LoginFlowCoordinator: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loginFlow()
     }
     
