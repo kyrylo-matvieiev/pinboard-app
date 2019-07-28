@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class EmptyView: UIView {
+final class EmptyView: UIView, XibLoadable {
     private enum LoalizedMessages {
         static let emptyList = NSLocalizedString("No point yet", comment: "")
     }

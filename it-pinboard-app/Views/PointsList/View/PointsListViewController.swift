@@ -16,6 +16,12 @@ class PointsListViewController: UIViewController {
     
     // MARK: - Properties
     
+    private lazy var refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        return control
+    }()
+    
     private var viewModel: PointsListViewModelType = PointsListViewModel()
     
     // MARK: - ViewController
@@ -23,19 +29,47 @@ class PointsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        configureTableView()
+        callbacksConfigure()
+        
+        refreshData()
     }
-    
+
     private func configureView() {
         parent?.title = MenuItem.pointsList.title
+    }
+    
+    private func configureTableView() {
+        tableView.tableFooterView = UIView()
+        tableView.refreshControl = refreshControl
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableView.automaticDimension
         
         tableView.register(UINib(nibName: PointCell.storyboardReuseId, bundle: nil),
-                          forCellReuseIdentifier: PointCell.storyboardReuseId)
+                           forCellReuseIdentifier: PointCell.storyboardReuseId)
+    }
+    
+    // MARK: - Actions
+    
+    private func callbacksConfigure() {
+        viewModel.pointsListCallback = {
+            self.configureEmptyView()
+        }
+        
+        viewModel.refreshingStateCallback = { [weak self] state in
+            state == .start
+                ? self?.tableView.beginRefreshing()
+                : self?.tableView.endRefreshing()
+        }
+        
+    }
+    
+    @objc
+    private func refreshData() {
+        viewModel.load()
     }
 }
 
@@ -43,17 +77,14 @@ class PointsListViewController: UIViewController {
 
 extension PointsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.pointsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PointCell.storyboardReuseId, for: indexPath)
         if let pointCell = cell as? PointCell {
             pointCell.delegate = self
-            //
-            let testData = PointCellViewData(pointName: "Point name", latitude: "latitude", longitude: "longitude")
-            //
-            pointCell.configureWith(viewData: testData)
+            pointCell.configureWith(viewData: viewModel.pointsList[indexPath.row])
         }
         return cell
     }
@@ -70,5 +101,19 @@ extension PointsListViewController: UITableViewDelegate {
 extension PointsListViewController: PointCellDelegate {
     func deleteCell() {
         print("PointCell delegate")
+    }
+}
+
+// MARK: - Helpful Methods
+
+extension PointsListViewController {
+    private func configureEmptyView() {
+        let emptyView = EmptyView.fromXib()
+        if viewModel.pointsList.isEmpty {
+            tableView.backgroundView = emptyView
+        } else {
+            tableView.backgroundView = nil
+        }
+        tableView.reloadData()
     }
 }

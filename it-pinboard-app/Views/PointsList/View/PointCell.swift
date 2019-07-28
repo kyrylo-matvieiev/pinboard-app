@@ -35,8 +35,8 @@ class PointCell: UITableViewCell {
     
     // MARK: - Configure
     
-    func configureWith(viewData: PointCellViewData) {
-        nameLabel.text = viewData.pointName
+    func configureWith(viewData: Point) {
+        nameLabel.text = viewData.name
         latitudeLabel.text = viewData.latitude
         longitudeLabel.text = viewData.longitude
     }
