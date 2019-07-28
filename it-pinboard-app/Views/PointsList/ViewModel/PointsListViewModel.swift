@@ -17,8 +17,15 @@ protocol PointsListViewModelType {
 }
 
 class PointsListViewModel: PointsListViewModelType {
+    
+    // MARK: - Properties
+    
+        // (Callbacks)
+    
     var refreshingStateCallback: (RefreshingState) -> Void? = { _ in }
     var pointsListCallback: () -> Void? = {}
+    
+        // (Repository)
     
     var pointsList = [Point]() {
         didSet {
@@ -26,11 +33,13 @@ class PointsListViewModel: PointsListViewModelType {
         }
     }
     
+    // MARK: - Network
+    
     func load() {
         refreshingStateCallback(.start)
-        let point = [Point(id: 1, name: "Home", latitude: "044323", longitude: "3234432")] //[Point]()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.pointsList = point
+           
             self.refreshingStateCallback(.end)
         }
     }

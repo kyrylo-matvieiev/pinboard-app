@@ -37,26 +37,26 @@ class PointsListViewController: UIViewController {
 
     private func configureView() {
         parent?.title = MenuItem.pointsList.title
+        tableView.backgroundColor = #colorLiteral(red: 0.9629039313, green: 0.9629039313, blue: 0.9629039313, alpha: 1)
     }
     
     private func configureTableView() {
         tableView.tableFooterView = UIView()
         tableView.refreshControl = refreshControl
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        
         tableView.rowHeight = UITableView.automaticDimension
-        
         tableView.register(UINib(nibName: PointCell.storyboardReuseId, bundle: nil),
                            forCellReuseIdentifier: PointCell.storyboardReuseId)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     // MARK: - Actions
     
     private func callbacksConfigure() {
-        viewModel.pointsListCallback = {
-            self.configureEmptyView()
+        viewModel.pointsListCallback = { [weak self] in
+            self?.configureEmptyView()
         }
         
         viewModel.refreshingStateCallback = { [weak self] state in
@@ -64,7 +64,6 @@ class PointsListViewController: UIViewController {
                 ? self?.tableView.beginRefreshing()
                 : self?.tableView.endRefreshing()
         }
-        
     }
     
     @objc
