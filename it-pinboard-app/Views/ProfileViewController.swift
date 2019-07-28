@@ -7,9 +7,24 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var logOutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
+    }
+    
+    private func configureView() {
+        logOutButton.addTarget(self, action: #selector(logOutAction), for: .touchUpInside)
+        parent?.title = MenuItem.profile.title
+    }
+    
+    @objc
+    private func logOutAction() {
+        GIDSignIn.sharedInstance().signOut()
     }
 }

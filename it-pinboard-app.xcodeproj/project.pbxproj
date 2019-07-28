@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		134A9F7F22EC9F7D0097DF4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 134A9F7E22EC9F7D0097DF4D /* GoogleService-Info.plist */; };
 		138ADC1A22EC94D70044B0B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138ADC1922EC94D70044B0B0 /* AppDelegate.swift */; };
 		138ADC1F22EC94D70044B0B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138ADC1D22EC94D70044B0B0 /* Main.storyboard */; };
 		138ADC2122EC94D70044B0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138ADC2022EC94D70044B0B0 /* Assets.xcassets */; };
@@ -28,11 +27,12 @@
 		13B13AFE22EDA81F00AEF0E8 /* PointsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AFD22EDA81F00AEF0E8 /* PointsListViewModel.swift */; };
 		13B13B0022EDA8FC00AEF0E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AFF22EDA8FC00AEF0E8 /* LoginViewController.swift */; };
 		13B13B0422EDAC4300AEF0E8 /* PointCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13B0322EDAC4300AEF0E8 /* PointCellViewData.swift */; };
+		13B13B1022EDE67000AEF0E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13B13B0F22EDE67000AEF0E8 /* GoogleService-Info.plist */; };
+		13B13B1222EDF27B00AEF0E8 /* LoginFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13B1122EDF27B00AEF0E8 /* LoginFlowCoordinator.swift */; };
 		8A8CBCCC6AF3E91DCEF196AF /* Pods_it_pinboard_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5005596D3078E1CF007300 /* Pods_it_pinboard_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		134A9F7E22EC9F7D0097DF4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		138ADC1622EC94D70044B0B0 /* it-pinboard-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "it-pinboard-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		138ADC1922EC94D70044B0B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		138ADC1E22EC94D70044B0B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		13B13AFD22EDA81F00AEF0E8 /* PointsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsListViewModel.swift; sourceTree = "<group>"; };
 		13B13AFF22EDA8FC00AEF0E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		13B13B0322EDAC4300AEF0E8 /* PointCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCellViewData.swift; sourceTree = "<group>"; };
+		13B13B0F22EDE67000AEF0E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		13B13B1122EDF27B00AEF0E8 /* LoginFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowCoordinator.swift; sourceTree = "<group>"; };
 		9A5005596D3078E1CF007300 /* Pods_it_pinboard_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_it_pinboard_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B049A59B54D20014309B2152 /* Pods-it-pinboard-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-it-pinboard-app.release.xcconfig"; path = "Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app.release.xcconfig"; sourceTree = "<group>"; };
 		E27103DB4DB01835A89ACE8C /* Pods-it-pinboard-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-it-pinboard-app.debug.xcconfig"; path = "Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				138ADC2522EC94D70044B0B0 /* Info.plist */,
-				134A9F7E22EC9F7D0097DF4D /* GoogleService-Info.plist */,
+				13B13B0F22EDE67000AEF0E8 /* GoogleService-Info.plist */,
 				138ADC2022EC94D70044B0B0 /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
@@ -157,6 +159,7 @@
 		13B13AD622ECA7BE00AEF0E8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				13B13B1122EDF27B00AEF0E8 /* LoginFlowCoordinator.swift */,
 				13B13AFF22EDA8FC00AEF0E8 /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -236,6 +239,7 @@
 				138ADC1322EC94D70044B0B0 /* Frameworks */,
 				138ADC1422EC94D70044B0B0 /* Resources */,
 				4AD5928410C8C9377A5E1353 /* [CP] Embed Pods Frameworks */,
+				DE7715DF8DFA10D6F5F3E227 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,11 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				138ADC2422EC94D70044B0B0 /* LaunchScreen.storyboard in Resources */,
-				134A9F7F22EC9F7D0097DF4D /* GoogleService-Info.plist in Resources */,
 				13B13AFA22ED989E00AEF0E8 /* EmprtyView.xib in Resources */,
 				138ADC2122EC94D70044B0B0 /* Assets.xcassets in Resources */,
 				13B13AFC22ED9C0B00AEF0E8 /* PointCell.xib in Resources */,
 				138ADC1F22EC94D70044B0B0 /* Main.storyboard in Resources */,
+				13B13B1022EDE67000AEF0E8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +339,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DE7715DF8DFA10D6F5F3E227 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -352,6 +373,7 @@
 				13B13AF822ED988000AEF0E8 /* EmptyView.swift in Sources */,
 				13B13ADC22ECB15F00AEF0E8 /* XibLoadable.swift in Sources */,
 				13B13AEC22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift in Sources */,
+				13B13B1222EDF27B00AEF0E8 /* LoginFlowCoordinator.swift in Sources */,
 				13B13AE222ECB6E400AEF0E8 /* ProfileViewController.swift in Sources */,
 				13B13AF522ED97D300AEF0E8 /* Point.swift in Sources */,
 				138ADC1A22EC94D70044B0B0 /* AppDelegate.swift in Sources */,

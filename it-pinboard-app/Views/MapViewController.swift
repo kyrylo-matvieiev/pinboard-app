@@ -11,5 +11,7 @@ import UIKit
 class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        parent?.title = MenuItem.map.title
     }
+    
 }

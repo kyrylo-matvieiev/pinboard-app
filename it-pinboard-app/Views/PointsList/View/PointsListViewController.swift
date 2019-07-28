@@ -25,7 +25,13 @@ class PointsListViewController: UIViewController {
         configureView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     private func configureView() {
+        parent?.title = MenuItem.pointsList.title
+        
         tableView.delegate = self
         tableView.dataSource = self
         

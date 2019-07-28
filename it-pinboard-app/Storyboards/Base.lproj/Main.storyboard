@@ -19,19 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1g-h8-8Wh">
-                                <rect key="frame" x="49" y="433" width="316" height="30"/>
+                                <rect key="frame" x="80" y="445.5" width="254" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="S26-Id-FmQ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="B1g-h8-8Wh" firstAttribute="centerY" secondItem="r6l-lP-vNx" secondAttribute="centerY" id="MbJ-u6-IGT"/>
-                            <constraint firstItem="B1g-h8-8Wh" firstAttribute="leading" secondItem="HvK-Lt-Rz4" secondAttribute="leading" constant="49" id="QOe-ye-87k"/>
+                            <constraint firstItem="B1g-h8-8Wh" firstAttribute="leading" secondItem="HvK-Lt-Rz4" secondAttribute="leading" constant="80" id="QOe-ye-87k"/>
                             <constraint firstItem="B1g-h8-8Wh" firstAttribute="centerX" secondItem="r6l-lP-vNx" secondAttribute="centerX" id="hCq-0k-mXW"/>
-                            <constraint firstItem="HvK-Lt-Rz4" firstAttribute="trailing" secondItem="B1g-h8-8Wh" secondAttribute="trailing" constant="49" id="tP5-rq-gSe"/>
+                            <constraint firstItem="HvK-Lt-Rz4" firstAttribute="trailing" secondItem="B1g-h8-8Wh" secondAttribute="trailing" constant="80" id="tP5-rq-gSe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HvK-Lt-Rz4"/>
                     </view>
+                    <connections>
+                        <outlet property="logOutButton" destination="B1g-h8-8Wh" id="fzX-Ve-JTo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fs-Jx-2JS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,12 +67,62 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="H6B-RY-SgD" kind="relationship" relationship="rootViewController" id="Nab-mK-PPg"/>
+                        <segue destination="0z2-mb-Fm6" kind="relationship" relationship="rootViewController" id="kZr-we-aFM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3f-xW-emZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-959" y="-603"/>
+            <point key="canvasLocation" x="-2462" y="-595"/>
+        </scene>
+        <!--Login Flow Coordinator-->
+        <scene sceneID="pTI-hu-Vxa">
+            <objects>
+                <viewController storyboardIdentifier="LoginFlowCoordinator" id="0z2-mb-Fm6" customClass="LoginFlowCoordinator" customModule="it_pinboard_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X2k-5r-NVH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bjE-DZ-11B"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pxO-NR-Pnf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywn-kL-227" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1687" y="-595"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="zlD-lp-DKb">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="Gzh-qH-pXb" customClass="LoginViewController" customModule="it_pinboard_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ksy-t6-6iQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XS1-3f-lgI" customClass="GIDSignInButton">
+                                <rect key="frame" x="80" y="423" width="254" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6mO-fb-kS3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XS1-3f-lgI" firstAttribute="centerY" secondItem="ksy-t6-6iQ" secondAttribute="centerY" id="Fe9-Qs-zsk"/>
+                            <constraint firstItem="XS1-3f-lgI" firstAttribute="leading" secondItem="IWH-1S-un0" secondAttribute="leading" constant="80" id="aVQ-gw-G8P"/>
+                            <constraint firstItem="XS1-3f-lgI" firstAttribute="centerX" secondItem="ksy-t6-6iQ" secondAttribute="centerX" id="hVZ-0k-Ah8"/>
+                            <constraint firstItem="IWH-1S-un0" firstAttribute="trailing" secondItem="XS1-3f-lgI" secondAttribute="trailing" constant="80" id="itc-QA-uwc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IWH-1S-un0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Akg-fH-D3Y"/>
+                    <connections>
+                        <outlet property="loginButton" destination="XS1-3f-lgI" id="5YU-0c-z50"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLW-qc-L6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-959" y="-595"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="SRg-im-3ev">
@@ -81,7 +137,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmI-Eq-aCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-209" y="-603"/>
+            <point key="canvasLocation" x="-1686" y="112"/>
         </scene>
         <!--Points List View Controller-->
         <scene sceneID="4oC-SV-27p">
