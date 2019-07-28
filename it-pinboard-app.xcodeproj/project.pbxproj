@@ -20,6 +20,14 @@
 		13B13AE222ECB6E400AEF0E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AE122ECB6E400AEF0E8 /* ProfileViewController.swift */; };
 		13B13AEA22ECEA6F00AEF0E8 /* StoryboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AE922ECEA6F00AEF0E8 /* StoryboardType.swift */; };
 		13B13AEC22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AEB22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift */; };
+		13B13AEF22ED86FC00AEF0E8 /* PointCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AEE22ED86FB00AEF0E8 /* PointCell.swift */; };
+		13B13AF522ED97D300AEF0E8 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AF422ED97D300AEF0E8 /* Point.swift */; };
+		13B13AF822ED988000AEF0E8 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AF722ED988000AEF0E8 /* EmptyView.swift */; };
+		13B13AFA22ED989E00AEF0E8 /* EmprtyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B13AF922ED989E00AEF0E8 /* EmprtyView.xib */; };
+		13B13AFC22ED9C0B00AEF0E8 /* PointCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B13AFB22ED9C0B00AEF0E8 /* PointCell.xib */; };
+		13B13AFE22EDA81F00AEF0E8 /* PointsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AFD22EDA81F00AEF0E8 /* PointsListViewModel.swift */; };
+		13B13B0022EDA8FC00AEF0E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13AFF22EDA8FC00AEF0E8 /* LoginViewController.swift */; };
+		13B13B0422EDAC4300AEF0E8 /* PointCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B13B0322EDAC4300AEF0E8 /* PointCellViewData.swift */; };
 		8A8CBCCC6AF3E91DCEF196AF /* Pods_it_pinboard_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5005596D3078E1CF007300 /* Pods_it_pinboard_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +47,14 @@
 		13B13AE122ECB6E400AEF0E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		13B13AE922ECEA6F00AEF0E8 /* StoryboardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardType.swift; sourceTree = "<group>"; };
 		13B13AEB22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		13B13AEE22ED86FB00AEF0E8 /* PointCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCell.swift; sourceTree = "<group>"; };
+		13B13AF422ED97D300AEF0E8 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		13B13AF722ED988000AEF0E8 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		13B13AF922ED989E00AEF0E8 /* EmprtyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmprtyView.xib; sourceTree = "<group>"; };
+		13B13AFB22ED9C0B00AEF0E8 /* PointCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointCell.xib; sourceTree = "<group>"; };
+		13B13AFD22EDA81F00AEF0E8 /* PointsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsListViewModel.swift; sourceTree = "<group>"; };
+		13B13AFF22EDA8FC00AEF0E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		13B13B0322EDAC4300AEF0E8 /* PointCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCellViewData.swift; sourceTree = "<group>"; };
 		9A5005596D3078E1CF007300 /* Pods_it_pinboard_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_it_pinboard_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B049A59B54D20014309B2152 /* Pods-it-pinboard-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-it-pinboard-app.release.xcconfig"; path = "Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app.release.xcconfig"; sourceTree = "<group>"; };
 		E27103DB4DB01835A89ACE8C /* Pods-it-pinboard-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-it-pinboard-app.debug.xcconfig"; path = "Target Support Files/Pods-it-pinboard-app/Pods-it-pinboard-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,7 +78,7 @@
 				13B13AD422ECA59B00AEF0E8 /* Shared */,
 				13B13AD622ECA7BE00AEF0E8 /* Login */,
 				13B13AD222ECA59B00AEF0E8 /* Menu */,
-				13B13ADD22ECB3C400AEF0E8 /* PointsListViewController.swift */,
+				13B13AF022ED870200AEF0E8 /* PointsList */,
 				13B13ADF22ECB6D500AEF0E8 /* MapViewController.swift */,
 				13B13AE122ECB6E400AEF0E8 /* ProfileViewController.swift */,
 			);
@@ -110,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				138ADC1922EC94D70044B0B0 /* AppDelegate.swift */,
+				13B13AF322ED97AB00AEF0E8 /* Business */,
 				134A9F7922EC9C0C0097DF4D /* Views */,
 				134A9F7A22EC9C860097DF4D /* Storyboards */,
 				134A9F7B22EC9CAC0097DF4D /* SupportingFiles */,
@@ -129,6 +146,7 @@
 		13B13AD422ECA59B00AEF0E8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				13B13AF622ED986C00AEF0E8 /* EmptyView */,
 				13B13ADB22ECB15F00AEF0E8 /* XibLoadable.swift */,
 				13B13AE922ECEA6F00AEF0E8 /* StoryboardType.swift */,
 				13B13AEB22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift */,
@@ -139,8 +157,54 @@
 		13B13AD622ECA7BE00AEF0E8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				13B13AFF22EDA8FC00AEF0E8 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		13B13AF022ED870200AEF0E8 /* PointsList */ = {
+			isa = PBXGroup;
+			children = (
+				13B13B0122EDA92300AEF0E8 /* View */,
+				13B13B0222EDA93C00AEF0E8 /* ViewModel */,
+			);
+			path = PointsList;
+			sourceTree = "<group>";
+		};
+		13B13AF322ED97AB00AEF0E8 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				13B13AF422ED97D300AEF0E8 /* Point.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		13B13AF622ED986C00AEF0E8 /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				13B13AF722ED988000AEF0E8 /* EmptyView.swift */,
+				13B13AF922ED989E00AEF0E8 /* EmprtyView.xib */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
+		13B13B0122EDA92300AEF0E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13B13B0322EDAC4300AEF0E8 /* PointCellViewData.swift */,
+				13B13AEE22ED86FB00AEF0E8 /* PointCell.swift */,
+				13B13AFB22ED9C0B00AEF0E8 /* PointCell.xib */,
+				13B13ADD22ECB3C400AEF0E8 /* PointsListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13B13B0222EDA93C00AEF0E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				13B13AFD22EDA81F00AEF0E8 /* PointsListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9A13B60C9BDE02D443439AAD /* Frameworks */ = {
@@ -222,7 +286,9 @@
 			files = (
 				138ADC2422EC94D70044B0B0 /* LaunchScreen.storyboard in Resources */,
 				134A9F7F22EC9F7D0097DF4D /* GoogleService-Info.plist in Resources */,
+				13B13AFA22ED989E00AEF0E8 /* EmprtyView.xib in Resources */,
 				138ADC2122EC94D70044B0B0 /* Assets.xcassets in Resources */,
+				13B13AFC22ED9C0B00AEF0E8 /* PointCell.xib in Resources */,
 				138ADC1F22EC94D70044B0B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,14 +342,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B13B0022EDA8FC00AEF0E8 /* LoginViewController.swift in Sources */,
+				13B13B0422EDAC4300AEF0E8 /* PointCellViewData.swift in Sources */,
 				13B13ADE22ECB3C400AEF0E8 /* PointsListViewController.swift in Sources */,
 				13B13AE022ECB6D500AEF0E8 /* MapViewController.swift in Sources */,
 				13B13AEA22ECEA6F00AEF0E8 /* StoryboardType.swift in Sources */,
 				13B13AD522ECA59B00AEF0E8 /* MenuItem.swift in Sources */,
+				13B13AFE22EDA81F00AEF0E8 /* PointsListViewModel.swift in Sources */,
+				13B13AF822ED988000AEF0E8 /* EmptyView.swift in Sources */,
 				13B13ADC22ECB15F00AEF0E8 /* XibLoadable.swift in Sources */,
 				13B13AEC22ECEC9700AEF0E8 /* UIViewController+Storyboard.swift in Sources */,
 				13B13AE222ECB6E400AEF0E8 /* ProfileViewController.swift in Sources */,
+				13B13AF522ED97D300AEF0E8 /* Point.swift in Sources */,
 				138ADC1A22EC94D70044B0B0 /* AppDelegate.swift in Sources */,
+				13B13AEF22ED86FC00AEF0E8 /* PointCell.swift in Sources */,
 				13B13AD822ECA8C800AEF0E8 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

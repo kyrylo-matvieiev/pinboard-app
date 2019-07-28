@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-    static func fromStoryboard(type: StrotyboardType) -> Self? {
+    static func fromStoryboard(type: StrotyboardType = .main) -> Self? {
         func instantiateVC<T: UIViewController>() -> T? {
             return UIStoryboard(name: type.name, bundle: .main)
                 .instantiateViewController(withIdentifier: String(describing: self)) as? T

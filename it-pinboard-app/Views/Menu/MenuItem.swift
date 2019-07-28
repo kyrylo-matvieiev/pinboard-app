@@ -47,11 +47,11 @@ enum MenuItem: Int {
     var initialController: UIViewController? {
         switch self {
         case .pointsList:
-            return PointsListViewController.fromStoryboard(type: .main)
+            return PointsListViewController.fromStoryboard()
         case .map:
-            return MapViewController.fromStoryboard(type: .main)
+            return MapViewController.fromStoryboard()
         case .profile:
-            return ProfileViewController.fromStoryboard(type: .main)
+            return ProfileViewController.fromStoryboard()
         }
     }
 }
