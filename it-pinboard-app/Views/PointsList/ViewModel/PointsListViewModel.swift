@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseDatabase
 
 protocol PointsListViewModelType {
     func load()
@@ -19,6 +21,8 @@ protocol PointsListViewModelType {
 class PointsListViewModel: PointsListViewModelType {
     
     // MARK: - Properties
+    
+    private let pointNetworkService = PointNetworkService()
     
         // (Callbacks)
     
@@ -36,11 +40,11 @@ class PointsListViewModel: PointsListViewModelType {
     // MARK: - Network
     
     func load() {
+        guard let user = Auth.auth().currentUser else { return }
         refreshingStateCallback(.start)
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-           
-            self.refreshingStateCallback(.end)
+        pointNetworkService.getPointLists(for: user) { [weak self] points in
+            self?.pointsList = points
+            self?.refreshingStateCallback(.end)
         }
     }
 }

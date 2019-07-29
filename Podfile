@@ -3,4 +3,5 @@ target 'it-pinboard-app' do
    pod 'Firebase/Analytics'
    pod 'Firebase/Auth'
    pod 'GoogleSignIn'
+   pod 'Firebase/Database'
 end
