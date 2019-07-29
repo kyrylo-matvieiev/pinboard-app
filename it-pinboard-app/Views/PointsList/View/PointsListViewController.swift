@@ -24,6 +24,8 @@ class PointsListViewController: UIViewController {
     
     private var viewModel: PointsListViewModelType = PointsListViewModel()
     
+    private var selectedIndexPath: IndexPath?
+    
     // MARK: - ViewController
     
     override func viewDidLoad() {
@@ -92,14 +94,17 @@ extension PointsListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension PointsListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
+    }
 }
 
 // MARK: - PointCellDelegate
 
 extension PointsListViewController: PointCellDelegate {
     func deleteCell() {
-        print("PointCell delegate")
+        guard let idx = selectedIndexPath else { return }
+        viewModel.deletePointAt(index: idx.row)
     }
 }
 

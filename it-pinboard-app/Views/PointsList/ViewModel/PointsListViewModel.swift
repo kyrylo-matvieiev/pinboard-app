@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 protocol PointsListViewModelType {
     func load()
+    func deletePointAt(index: Int)
     
     var pointsList: [Point] { get }
     var pointsListCallback: () -> Void? { get set }
@@ -45,6 +46,14 @@ class PointsListViewModel: PointsListViewModelType {
         pointNetworkService.getPointLists(for: user) { [weak self] points in
             self?.pointsList = points
             self?.refreshingStateCallback(.end)
+        }
+    }
+    
+    func deletePointAt(index: Int) {
+        guard let user = Auth.auth().currentUser else { return }
+        guard let deletePointId = pointsList[index].id else { return }
+        pointNetworkService.deletePoint(id: deletePointId, form: user) { [weak self] error in
+            self?.pointsList.remove(at: index)
         }
     }
 }
