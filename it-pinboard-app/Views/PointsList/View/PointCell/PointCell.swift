@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PointCellDelegate: class {
-   func deleteCell()
+    func deleteCell<T: PointCell>(cell: T)
 }
 
 class PointCell: UITableViewCell {
@@ -28,17 +28,27 @@ class PointCell: UITableViewCell {
     
     weak var delegate: PointCellDelegate?
     
+    // MARK: Ovrride
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureView()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        nameLabel.text = ""
+        latitudeLabel.text = ""
+        longitudeLabel.text = ""
     }
     
     // MARK: - Configure
     
     func configureWith(viewData: Point) {
         nameLabel.text = viewData.name
-        latitudeLabel.text = viewData.latitude
-        longitudeLabel.text = viewData.longitude
+        latitudeLabel.text = String(viewData.latitude)
+        longitudeLabel.text = String(viewData.longitude)
     }
     
     private func configureView() {
@@ -51,7 +61,7 @@ class PointCell: UITableViewCell {
     @objc
     private func longTapGestureAction() {
         guard longTapGesture.state == .began else { return }
-        delegate?.deleteCell()
+        delegate?.deleteCell(cell: self)
     }
 }
 

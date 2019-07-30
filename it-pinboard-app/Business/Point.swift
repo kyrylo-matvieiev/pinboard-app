@@ -8,43 +8,40 @@
 
 import Foundation
 
-class Point: Codable {
+fileprivate enum Keys {
+    static let kName = "name"
+    static let kLatitude = "latitude"
+    static let kLongitude = "longitude"
+}
+
+struct Point {
     var id: String? = nil
     var name: String
-    var latitude: String
-    var longitude: String
+    var latitude: Double
+    var longitude: Double
     
-    init(name: String, latitude: String, longitude: String) {
+    init(name: String, latitude: Double, longitude: Double) {
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
     }
     
     init?(id: String, dict: [String: Any]) {
-        guard let name = dict["name"] as? String,
-            let latitude = dict["latitude"] as? String,
-            let longitude = dict["longitude"] as? String
+        guard let name = dict[Keys.kName] as? String,
+            let latitude = dict[Keys.kLatitude] as? Double,
+            let longitude = dict[Keys.kLongitude] as? Double
             else { return nil }
         self.id = id
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
     }
-    
-    // MARK: - Codable
-    
-    enum CodingKeys: String, CodingKey {
-        case id = "uid"
-        case name
-        case latitude
-        case longitude
-    }
-    
-    required init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(String.self, forKey: .id)
-        name = try container.decode(String.self, forKey: .name)
-        latitude = try container.decode(String.self, forKey: .latitude)
-        longitude = try container.decode(String.self, forKey: .longitude)
+}
+
+extension Point {
+    func convertToDict() -> [String: Any] {
+        return [Keys.kName: self.name,
+                Keys.kLatitude: self.latitude,
+                Keys.kLongitude: self.longitude]
     }
 }

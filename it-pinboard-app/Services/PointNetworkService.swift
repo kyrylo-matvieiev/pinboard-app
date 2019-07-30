@@ -22,17 +22,19 @@ class PointNetworkService {
     private let ref = Database.database().reference()
     
     // MARK: - Func
-    
+
     func addPoint(_ point: Point, to user: User, _ completion: @escaping (Error?) -> Void) {
         let path = ref.child(Keys.kUser).child(user.uid).child(Keys.kPontsList).childByAutoId()
-        do {
-            let json = try point.toJson(excluding: [Keys.kPointId])
-            path.setValue(json)
-        } catch {
-            print("### Error")
+        let fireObj = point.convertToDict()
+        
+        path.setValue(fireObj) { (error, ref) in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
+            }
         }
     }
-    
     
     func getPointLists(for user: User, completion: @escaping ([Point]) -> Void) {
         let path = ref.child(Keys.kUser).child(user.uid).child(Keys.kPontsList)
@@ -50,7 +52,6 @@ class PointNetworkService {
         
     }
     
-    
     func deletePoint(id: String, form user: User, completion: @escaping (Error?) -> Void) {
         let path = ref.child(Keys.kUser).child(user.uid).child(Keys.kPontsList).child(id)
         path.removeValue { (error, ref) in
@@ -61,18 +62,5 @@ class PointNetworkService {
             }
         }
     }
-}
-
-extension Encodable {
-    func toJson(excluding keys: [String] = [String]()) throws -> [String: Any] {
-        let objectData = try JSONEncoder().encode(self)
-        let jsonObject = try JSONSerialization.jsonObject(with: objectData, options: [])
-        guard var json = jsonObject as? [String: Any] else { throw NSError() }
-        
-        for key in keys {
-            json[key] = nil
-        }
-        
-        return json
-    }
+    
 }

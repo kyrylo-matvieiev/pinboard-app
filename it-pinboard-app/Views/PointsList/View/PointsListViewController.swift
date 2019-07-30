@@ -8,6 +8,10 @@
 
 import UIKit
 
+#warning("FirebaseAuth -> FOR TEST")
+import FirebaseAuth
+
+
 class PointsListViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -24,8 +28,6 @@ class PointsListViewController: UIViewController {
     
     private var viewModel: PointsListViewModelType = PointsListViewModel()
     
-    private var selectedIndexPath: IndexPath?
-    
     // MARK: - ViewController
     
     override func viewDidLoad() {
@@ -35,8 +37,26 @@ class PointsListViewController: UIViewController {
         callbacksConfigure()
         
         refreshData()
+        
+        #warning("rightBarButtonItem -> FOR TEST")
+        parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createTest))
+   
+    }
+    
+    #warning("private func createTest() -> FOR TEST")
+    @objc
+    private func createTest() {
+
+        let service = PointNetworkService()
+        let testablePoint = Point(name: "fw", latitude: -3443.33232323, longitude: 3213.22)
+        
+        service.addPoint(testablePoint, to: Auth.auth().currentUser!, { error in
+            //work with error
+        })
+       
     }
 
+    
     private func configureView() {
         parent?.title = MenuItem.pointsList.title
         tableView.backgroundColor = #colorLiteral(red: 0.9629039313, green: 0.9629039313, blue: 0.9629039313, alpha: 1)
@@ -93,18 +113,15 @@ extension PointsListViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension PointsListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedIndexPath = indexPath
-    }
-}
+extension PointsListViewController: UITableViewDelegate {}
 
 // MARK: - PointCellDelegate
 
 extension PointsListViewController: PointCellDelegate {
-    func deleteCell() {
-        guard let idx = selectedIndexPath else { return }
-        viewModel.deletePointAt(index: idx.row)
+    func deleteCell<T>(cell: T) {
+        guard let pointCell = cell as? PointCell,
+            let indexPath = tableView.indexPath(for: pointCell) else { return }
+        viewModel.deletePointAt(index: indexPath.row)
     }
 }
 

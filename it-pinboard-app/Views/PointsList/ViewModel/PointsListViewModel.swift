@@ -53,7 +53,11 @@ class PointsListViewModel: PointsListViewModelType {
         guard let user = Auth.auth().currentUser else { return }
         guard let deletePointId = pointsList[index].id else { return }
         pointNetworkService.deletePoint(id: deletePointId, form: user) { [weak self] error in
-            self?.pointsList.remove(at: index)
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                self?.pointsList.remove(at: index)
+            }
         }
     }
 }
