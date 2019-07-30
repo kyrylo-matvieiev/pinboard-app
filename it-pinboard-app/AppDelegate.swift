@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
 import GoogleSignIn
 
 @UIApplicationMain
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        GMSServices.provideAPIKey("AIzaSyAVkgMuOSifdyxgu6M9KEVwcaD0lUJr9ik")
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         return true
     }
