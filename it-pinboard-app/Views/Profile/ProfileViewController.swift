@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
     
     private func configureView() {
         parent?.title = MenuItem.profile.title
-        
+        view.backgroundColor = #colorLiteral(red: 0.9629039313, green: 0.9629039313, blue: 0.9629039313, alpha: 1)
         logOutButton.addTarget(self, action: #selector(logOutAction), for: .touchUpInside)
         logOutButton.layer.cornerRadius = Constants.kBtnCornerRadius
         logOutButton.backgroundColor = Constants.kBtnBgColor

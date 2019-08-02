@@ -38,7 +38,7 @@ class PointNetworkService {
     
     func getPointLists(for user: User, completion: @escaping ([Point]) -> Void) {
         let path = ref.child(Keys.kUser).child(user.uid).child(Keys.kPontsList).queryOrdered(byChild: Keys.kOrderedByName)
-        path.observeSingleEvent(of: .value) { snapshot in
+        path.observe(.value) { snapshot in
             var tmpPointsList = [Point]()
             snapshot.children.forEach {
                 if let snapshot = $0 as? DataSnapshot,

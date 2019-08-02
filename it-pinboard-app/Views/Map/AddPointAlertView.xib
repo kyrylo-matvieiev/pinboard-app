@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddPointAlertView" customModule="it_pinboard_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXa-sG-wLM">
+                    <rect key="frame" x="87" y="343" width="240" height="210"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="hhJ-El-sHA">
+                            <rect key="frame" x="0.0" y="10" width="240" height="200"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9u-W1-UTL">
+                                    <rect key="frame" x="65" y="0.0" width="110" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eAJ-gF-gJ0">
+                                    <rect key="frame" x="46" y="71" width="148" height="48.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0v-2y-EZN">
+                                            <rect key="frame" x="50.5" y="0.0" width="47.5" height="13.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name of point" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWe-df-iUV">
+                                            <rect key="frame" x="0.0" y="18.5" width="148" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="G9n-Yc-egr">
+                                    <rect key="frame" x="0.0" y="170" width="240" height="30"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsY-WZ-MAK">
+                                            <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q83-JJ-pU2">
+                                            <rect key="frame" x="120.5" y="0.0" width="119.5" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="G9n-Yc-egr" firstAttribute="leading" secondItem="hhJ-El-sHA" secondAttribute="leading" id="6Ps-CF-rmI"/>
+                                <constraint firstAttribute="trailing" secondItem="G9n-Yc-egr" secondAttribute="trailing" id="tp5-Ga-IJH"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hhJ-El-sHA" firstAttribute="leading" secondItem="UXa-sG-wLM" secondAttribute="leading" id="McK-UR-adk"/>
+                        <constraint firstAttribute="width" constant="240" id="WR1-Kg-JhP"/>
+                        <constraint firstAttribute="bottom" secondItem="hhJ-El-sHA" secondAttribute="bottom" id="kEd-O0-fA2"/>
+                        <constraint firstAttribute="height" constant="210" id="r9t-bR-2KG"/>
+                        <constraint firstItem="hhJ-El-sHA" firstAttribute="top" secondItem="UXa-sG-wLM" secondAttribute="top" constant="10" id="xWT-vT-uVN"/>
+                        <constraint firstAttribute="trailing" secondItem="hhJ-El-sHA" secondAttribute="trailing" id="zLr-ja-UJz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="UXa-sG-wLM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="75V-Ub-vuE"/>
+                <constraint firstItem="UXa-sG-wLM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gyP-QC-QLR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="containerView" destination="UXa-sG-wLM" id="f4R-xf-Ek1"/>
+                <outlet property="errorLabel" destination="E0v-2y-EZN" id="7PD-3m-knf"/>
+                <outlet property="inputTextField" destination="pWe-df-iUV" id="ngU-yo-AqT"/>
+                <outletCollection property="actionButtons" destination="jsY-WZ-MAK" collectionClass="NSMutableArray" id="rex-si-SyF"/>
+                <outletCollection property="actionButtons" destination="Q83-JJ-pU2" collectionClass="NSMutableArray" id="1qg-Hg-c1w"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+        </view>
+    </objects>
+</document>

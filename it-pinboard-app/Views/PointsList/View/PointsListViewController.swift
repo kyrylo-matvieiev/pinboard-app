@@ -8,10 +8,6 @@
 
 import UIKit
 
-#warning("FirebaseAuth -> FOR TEST")
-import FirebaseAuth
-
-
 class PointsListViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -36,26 +32,8 @@ class PointsListViewController: UIViewController {
         configureTableView()
         callbacksConfigure()
         
-        refreshData()
-        
-        #warning("rightBarButtonItem -> FOR TEST")
-        parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createTest))
-   
+        refreshData()   
     }
-    
-    #warning("private func createTest() -> FOR TEST")
-    @objc
-    private func createTest() {
-
-        let service = PointNetworkService()
-        let testablePoint = Point(name: "fw", latitude: -3443.33232323, longitude: 3213.22)
-        
-        service.addPoint(testablePoint, to: Auth.auth().currentUser!, { error in
-            //work with error
-        })
-       
-    }
-
     
     private func configureView() {
         parent?.title = MenuItem.pointsList.title
@@ -113,7 +91,11 @@ extension PointsListViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension PointsListViewController: UITableViewDelegate {}
+extension PointsListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
 
 // MARK: - PointCellDelegate
 
