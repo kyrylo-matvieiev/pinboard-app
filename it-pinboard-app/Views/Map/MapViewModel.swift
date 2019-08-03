@@ -18,8 +18,10 @@ protocol MapViewModelType {
 }
 
 class MapViewModel: MapViewModelType {
-    var pointsListCallback: () -> Void = {}
     
+    // MARK: Properties
+    
+    var pointsListCallback: () -> Void = {}
     private let pointNetworkService = PointNetworkService()
     
     var points = [Point]() {
@@ -27,6 +29,8 @@ class MapViewModel: MapViewModelType {
             pointsListCallback()
         }
     }
+    
+    // MARK: - Functions
     
     func load() {
         guard let user = Auth.auth().currentUser else { return }

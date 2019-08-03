@@ -35,13 +35,15 @@ class MapViewController: UIViewController  {
         return CLLocationManager.authorizationStatus()
     }
     
-    private lazy var addPointAlertView: AddPointAlertView? = AddPointAlertView.fromXib()
+    private var addPointAlertView: AddPointAlertView?
     private var viewModel: MapViewModelType = MapViewModel()
     private let locationManager = CLLocationManager()
     private var clusterManager: GMUClusterManager!
-    
-    
     private var coordinateToSave: CLLocationCoordinate2D?
+    
+    var initialPoint: Point? {
+        didSet { checkInitialPointViewFlow() }
+    }
     
     // MARK: - ViewController
     
@@ -112,12 +114,18 @@ class MapViewController: UIViewController  {
         let camera = GMSCameraPosition(target: point, zoom: Constants.cameraZoom)
         gMapView.animate(to: camera)
     }
+    
+    private func checkInitialPointViewFlow() {
+        guard let initialPoint = self.initialPoint else { return }
+        replaceViewToPoint(CLLocationCoordinate2D(latitude: initialPoint.latitude, longitude: initialPoint.longitude))
+    }
 }
 
 // MARK: - GMSMapViewDelegate
 
 extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        addPointAlertView = AddPointAlertView.fromXib()
         addPointAlertView?.delegate = self
         coordinateToSave = coordinate
         view.addSubview(addPointAlertView!)
@@ -184,15 +192,18 @@ extension MapViewController: AddPointAlertViewDelegate {
         
         viewModel.savePoint(point, completion: {
             self.addPointAlertView?.removeFromSuperview()
+            self.addPointAlertView = nil
         })
     }
 }
+
+// MARK: - GMSMarker Extension
 
 extension GMSMarker {
     func configureStyle(attach toMap: GMSMapView) {
         let image = UIImage(named: "pinMap")?.withRenderingMode(.alwaysTemplate)
         let markerImage = UIImageView(image: image)
-        markerImage.tintColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        markerImage.tintColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
         markerImage.frame.size = CGSize(width: 30, height: 30)
         self.iconView = markerImage
         self.map = toMap

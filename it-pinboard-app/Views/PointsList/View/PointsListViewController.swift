@@ -93,7 +93,13 @@ extension PointsListViewController: UITableViewDataSource {
 
 extension PointsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let childViewControllers = tabBarController?.viewControllers else { return }
+        for (idx, vc) in childViewControllers.enumerated() {
+            if let mapViewController = vc as? MapViewController {
+                mapViewController.initialPoint = viewModel.pointsList[indexPath.row]
+                tabBarController?.selectedIndex = idx
+            }
+        }
     }
 }
 

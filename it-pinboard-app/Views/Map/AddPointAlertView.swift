@@ -15,7 +15,7 @@ protocol AddPointAlertViewDelegate: class {
 class AddPointAlertView: UIView, XibLoadable {
     
     private enum Constants {
-        static let kButtonColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        static let kButtonColor = #colorLiteral(red: 0, green: 0.479465425, blue: 1, alpha: 1)
         static let kCornerRadius: CGFloat  = 6
         static let kBorderWidth: CGFloat = 2
         static let kBgColor = #colorLiteral(red: 0.2192138871, green: 0.2359115126, blue: 0.259275401, alpha: 0.7802321743)
