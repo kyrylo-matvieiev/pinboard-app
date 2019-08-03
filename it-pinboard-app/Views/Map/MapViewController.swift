@@ -36,10 +36,10 @@ class MapViewController: UIViewController  {
     }
     
     private var addPointAlertView: AddPointAlertView?
-    private var viewModel: MapViewModelType = MapViewModel()
-    private let locationManager = CLLocationManager()
     private var clusterManager: GMUClusterManager!
     private var coordinateToSave: CLLocationCoordinate2D?
+    private var viewModel: MapViewModelType = MapViewModel()
+    private let locationManager = CLLocationManager()
     
     var initialPoint: Point? {
         didSet { checkInitialPointViewFlow() }
